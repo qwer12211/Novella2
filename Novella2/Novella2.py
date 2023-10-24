@@ -10,13 +10,13 @@ getatt("Enter")
 print("Часть первая")
 try:
     name = input("Введите имя персонажа: " )
-    name = name.title() #преобразование
+    name = name.title()
     age = float(input("Введите возраст персонажа:"))
-    info = "Имя вашего персонажа: %s, Возраст вашего персонажа: %d" % (name, age) 
+    info = "Имя вашего персонажа: %s, Возраст вашего персонажа: %d" % (name, age)
     print(info)
     input()
 except ValueError:
-    print("Ошибка")
+    print("Ошибка, пересоздайте персонажа.")
 text = ("Одной тёмной вы решаете сбежать посмотреть море.\n")
 for char in text:
     print(char, end='', flush=True)
@@ -34,8 +34,6 @@ for char in text:
     print(char, end='', flush=True)
     time.sleep(0.04)
 
-
-
 text = ("Вы  стали спускаться в кустарники цветущих алых роз.\n")
 for char in text:
     print(char, end='', flush=True)
@@ -46,7 +44,7 @@ for char in text:
     print(char, end='', flush=True)
     time.sleep(0.04)
 
-itemsnarukzake = {"верёвка"}
+itemsnarukzake = {"верёвка."}
 itemsnarukzake.add ("цветок розы,")
 print("Теперь весит на вашем рюкзаке:")
 print(*itemsnarukzake)
@@ -63,8 +61,6 @@ for char in text:
     print(char, end='', flush=True)
     time.sleep(0.04)
 
-input()
-
 text = ("Вы решаете отсидеться в своём любимом месте на берегу моря.\n")
 for char in text:
     print(char, end='', flush=True)
@@ -80,10 +76,10 @@ for char in text:
      print(char, end='', flush=True)
      time.sleep(0.04)
 
-rukzak = {"батон хлеба", "ножик", "зажигалка"}
+print("Теперь лежит в вашем рюкзаке:")
+rukzak = {"Батон хлеба", "Ножик", "Зажигалка."}
 for i in rukzak:
     print(i)
-    print("Лежит в вашем рюкзаке:")
 
 text = ("Вы вошли в свою тайную обитель.\n")
 for char in text:
@@ -103,9 +99,7 @@ for char in messege:
      time.sleep(0.04)
 
 textA = (" кто здесь?!\n")
-print(textA.upper())  
-
-person = {"siluet": "высокий", "teloslozenie": "худой" }
+print(textA.upper())
 
 fraza = f"{name}, ты меня слышишь?"
 print(fraza)
@@ -124,6 +118,7 @@ def getat(ie):
     print("Его имя:" + ie)
 getat("Роджер Кортесс?!")
 
+input()
 
 text = ("Вам занкомо это имя.\n")
 for char in text:
@@ -141,7 +136,7 @@ for char in text:
      print(char, end='', flush=True)
      time.sleep(0.04)
 
-text = ("Вы понимаете, что убираться отсюда, пока не случилось ничего дурного.\n")
+text = ("Вы понимаете, что нужно убираться отсюда, пока не случилось ничего дурного.\n")
 for char in text:
      print(char, end='', flush=True)
      time.sleep(0.04)
@@ -154,6 +149,8 @@ for char in messege:
 def gettr(sewr):
     print( sewr + "Родители учили меня не разговаривать с незнакомцами.")
 gettr("Вы: ")
+
+input()
 
 messege = ("Роджер: \" Ха-ха-ха!\n")
 for char in messege:
@@ -176,6 +173,8 @@ def getatr(ser):
     print( ser + "Что тебе от  меня нужно?")
 getatr("Вы: ")
 
+input()
+
 messege = ("Роджер: Я жажду мести. До сих пор никто из людей не видел и не слышал меня, но ты станешь моим голосом и руками. Я, наконец, смогу расправиться со своими убийцами, предавшими меня, и обрету покой!\n")
 for char in messege:
     print(char, end='', flush=True)
@@ -185,6 +184,7 @@ def getar(se):
     print( se + "Ты ошибаешься. Я ничем не смогу тебе помочь. Ты только зря тратишь время")
 getar("Вы: ")
 
+input()
 
 messege = ("Роджер:  Для меня время больше ничего не значит...\n")
 for char in messege:
@@ -204,6 +204,8 @@ for char in messege:
 def getaptr(segr):
     print( segr + "А если я откажусь?")
 getaptr("Вы: ")
+
+input()
 
 messege = ("Роджер:  Я сведу тебя с ума. У меня много свобоного времени и спешить мне некуда.\n")
 for char in messege:
@@ -232,7 +234,7 @@ for char in text:
     print(char, end='', flush=True)
     time.sleep(0.04)
 
-text = (" Из кустов неосторожно вывалилось небольшая собака по кличке Вивик.\n")
+text = ("Из кустов неосторожно вывалилось небольшая собака по кличке Вивик.\n")
 for char in text:
     print(char, end='', flush=True)
     time.sleep(0.04)
