@@ -11,7 +11,7 @@ def getatt(ise):
 getatt("Enter")
 print("Часть первая")
 
-def show_menu():
+def menu():
     print("Меню:")
     print("1. Выход")
     print("2. Удалить все сохраненные данные")
@@ -26,7 +26,7 @@ def show_menu():
         view_data()
     else:
         print("Неправильный выбор. Попробуйте еще раз.")
-        show_menu()
+        menu()
 
 def view_data():
     data = load_data()
@@ -45,7 +45,7 @@ def delete_data():
         print("Все сохраненные данные удалены.")
     else:
         print("Отменено.")
-    show_menu()
+    menu()
 
 def save_data(data):
     with open('data.json', 'w') as json_file:
@@ -333,4 +333,4 @@ for char in text:
     print(char, end='', flush=True)
     time.sleep(0.04)
 
-show_menu()
+menu()
