@@ -1,6 +1,4 @@
 import time
-import json
-import csv
 def getattr(user):
     print("приветствуем  вас," + user)
 getattr("Пользователь")
@@ -11,74 +9,10 @@ def getatt(ise):
 getatt("Enter")
 print("Часть первая")
 
-def menu():
-    print("Меню:")
-    print("1. Выход")
-    print("2. Удалить все сохраненные данные")
-    print("3. Просмотреть сохраненные данные")
-
-    choice = input("Введите номер действия: ")
-    if choice == "1":
-        exit()
-    elif choice == "2":
-        delete_data()
-    elif choice == "3":
-        view_data()
-    else:
-        print("Неправильный выбор. Попробуйте еще раз.")
-        menu()
-
-def view_data():
-    data = load_data()
-    if len(data) == 0:
-        print("Нет сохраненных данных.")
-    else:
-        print("Сохраненные данные:")
-        for item in data:
-            print(f"Имя: {item['name']}, Возраст: {item['age']}")
-
-
-def delete_data():
-    confirmation = input("Вы уверены, что хотите удалить все сохраненные данные? (y/n): ")
-    if confirmation.lower() == "y":
-        save_data([])
-        print("Все сохраненные данные удалены.")
-    else:
-        print("Отменено.")
-    menu()
-
-def save_data(data):
-    with open('data.json', 'w') as json_file:
-        json.dump(data, json_file)
-
-def load_data():
-    try:
-        with open('data.json', 'r') as json_file:
-            return json.load(json_file)
-    except FileNotFoundError:
-        return []
-
-def update_csv(data):
-    csv_data = []
-    for item in data:
-        csv_data.append([item['name'], str(item['age'])])
-
-    with open('data.csv', 'w', newline='') as csvfile:
-        writer = csv.writer(csvfile)
-        writer.writerow(['Name', 'Age'])
-        writer.writerows(csv_data)
-
 name = input("Введите имя персонажа: ")
 name = name.title()
 age = float(input("Введите возраст персонажа: "))
 
-data = load_data()
-
-data.append({'name': name, 'age': age})
-
-save_data(data)
-
-update_csv(data)
 def Tekst():
     print("Начало")
 info = "Имя вашего персонажа: %s, Возраст вашего персонажа: %d" % (name, age)
@@ -333,4 +267,6 @@ for char in text:
     print(char, end='', flush=True)
     time.sleep(0.04)
 
-menu()
+
+
+
